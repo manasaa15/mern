@@ -9,6 +9,7 @@ pipeline {
         SONAR_PROJECT_KEY = 'backend-task'
         SONAR_PROJECT_NAME = 'backend-task'
         SONAR_TOKEN = 'sqp_a3d05eb002e43a7f4e04987fb5ba80850b952c36'
+         PATH = "C:\\Windows\\System32;C:\\Program Files\\Git\bin"
     }
     stages {
         stage('Checkout') {
