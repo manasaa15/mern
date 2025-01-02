@@ -26,7 +26,7 @@ pipeline {
             steps {
                 bat """
                 "C:\\Users\\Admin\\Downloads\\scanner\\sonar-scanner-6.2.1.4610-windows-x64\\bin\\sonar-scanner.bat" ^
-                -D"sonar.projectKey=backend_task" ^
+                -D"sonar.projectKey=backend-task" ^
                 -D"sonar.sources=." ^
                 -D"sonar.host.url=http://localhost:9000" ^
                 -D"sonar.token=sqp_a3d05eb002e43a7f4e04987fb5ba80850b952c36"
