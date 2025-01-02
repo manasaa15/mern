@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs '23.5.0' // Node.js tool name configured in Jenkins
+        nodejs '20.11.0' // Node.js tool name configured in Jenkins
     }
     environment {
         SONAR_SCANNER_HOME = 'C:\\Users\\Admin\\Downloads\\scanner\\sonar-scanner-6.2.1.4610-windows-x64\\bin'
