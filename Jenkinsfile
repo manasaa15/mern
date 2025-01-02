@@ -6,8 +6,8 @@ pipeline {
     environment {
         SONAR_SCANNER_HOME = 'C:\\Users\\Admin\\Downloads\\scanner\\sonar-scanner-6.2.1.4610-windows-x64\bin'
         SONAR_HOST_URL = 'http://localhost:9000'
-        SONAR_PROJECT_KEY = 'backend_task'
-        SONAR_PROJECT_NAME = 'backend_task'
+        SONAR_PROJECT_KEY = 'backend-task'
+        SONAR_PROJECT_NAME = 'backend-task'
         SONAR_TOKEN = 'sqp_a3d05eb002e43a7f4e04987fb5ba80850b952c36'
     }
     stages {
