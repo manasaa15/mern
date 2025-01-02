@@ -4,7 +4,7 @@ pipeline {
         nodejs '20.11.0' // Node.js tool name configured in Jenkins
     }
     environment {
-        SONAR_SCANNER_HOME = 'C:\\Users\\Admin\\Downloads\\scanner\\sonar-scanner-6.2.1.4610-windows-x64\bin'
+        SONAR_SCANNER_HOME = 'C:\\Users\\Admin\\Downloads\\scanner\\sonar-scanner-6.2.1.4610-windows-x64\\bin'
         SONAR_HOST_URL = 'http://localhost:9000'
         SONAR_PROJECT_KEY = 'backend-task'
         SONAR_PROJECT_NAME = 'backend-task'
@@ -24,13 +24,13 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 bat """
-                "C:\\Users\\Admin\\Downloads\\scanner\\sonar-scanner-6.2.1.4610-windows-x64\\binsonar-scanner.bat" ^
-                -D"sonar.projectKey=backend-task" ^
+                "C:\\Users\\Admin\\Downloads\\scanner\\sonar-scanner-6.2.1.4610-windows-x64\\bin\\sonar-scanner.bat" ^
+                -D"sonar.projectKey=backend_task" ^
                 -D"sonar.sources=." ^
                 -D"sonar.host.url=http://localhost:9000" ^
                 -D"sonar.token=sqp_a3d05eb002e43a7f4e04987fb5ba80850b952c36"
                 """
-              
+            }
         }
     }
     post {
@@ -39,6 +39,9 @@ pipeline {
         }
         success {
             echo 'SonarQube analysis completed successfully!'
+        }
+        failure {
+            echo 'Pipeline execution failed!'
         }
     }
 }
